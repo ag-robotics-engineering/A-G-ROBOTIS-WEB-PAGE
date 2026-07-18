@@ -810,6 +810,12 @@ textarea { resize: vertical; }
 /* ===========================================================
    BOTÓN DE WHATSAPP — nav + flotante
    =========================================================== */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .nav-whatsapp-btn {
   display: inline-flex;
   align-items: center;
@@ -826,6 +832,25 @@ textarea { resize: vertical; }
 }
 .nav-whatsapp-btn:hover, .nav-whatsapp-btn:focus-visible {
   background: #1ebe5b;
+}
+
+.nav-email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: var(--line-cyan) !important;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line-cyan-dim) !important;
+  font-weight: 700;
+  opacity: 1 !important;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav-email-btn:hover, .nav-email-btn:focus-visible {
+  background: var(--line-cyan-dim);
+  color: var(--navy-950) !important;
 }
 
 /* ===========================================================
@@ -986,7 +1011,10 @@ textarea { resize: vertical; }
       <a href="#robots-stock">Robots</a>
       <a href="#contacto">Contacto</a>
     </nav>
-    <a href="#" id="nav-whatsapp-btn" class="nav-whatsapp-btn" target="_blank" rel="noopener">WhatsApp</a>
+    <div class="header-actions">
+      <a href="#" id="nav-whatsapp-btn" class="nav-whatsapp-btn" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:guarinangulosebastian2024@gmail.com" class="nav-email-btn">Correo</a>
+    </div>
   </div>
 </header>
 
@@ -1519,12 +1547,12 @@ function fillFooterContact() {
    subido junto a tu index.html.
 ========================================================= */
 const VIDEOS = [
-  {
-    titulo: "Cómo trabajamos en el taller",
-    descripcion: "Un vistazo rápido a la impresora en acción.",
-    // Reemplaza esta URL por tu video real de YouTube (usa el link de "Insertar"/"Embed")
-    youtube: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  },
+  // Descomenta y edita esto cuando subas tu video .mp4 a la carpeta "videos":
+  // {
+  //   titulo: "Cómo trabajamos en el taller",
+  //   descripcion: "Un vistazo rápido a la impresora en acción.",
+  //   mp4: "videos/mi-video.mp4",
+  // },
 ];
 
 function renderVideos() {
